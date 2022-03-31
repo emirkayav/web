@@ -125,24 +125,20 @@ echo $aylarstring = implode ("-",$aylardizisi);
 echo "<br>";
 
 $iban="TR000000111122223333";
-$yeniiban= str_split($iban, 4);
+$yeniIban=str_split($iban, 4);
 echo "<pre>";
-print_r($yeniiban);
+print_r($yeniIban);
 echo "</pre>";
-
-echo "<br>foreach iban: ";
-
-foreach ($yeniiban as $parca){
-    echo  "$parca";
-
+echo "<br> Foreach Iban: "; 
+foreach ($yeniIban as $parca){
+    echo $parca . " ";
 }
 
 echo "<br>";
-echo "implode iban:" . implode("-", $yeniiban);
-
-echo "<br> for iban: ";
-for($i = 0; $i < count($yeniiban); $i++){
-    echo $yeniiban[$i] . " ";
+echo "Implode Iban: " . implode("-", $yeniIban);
+echo "<br> For Iban: "; 
+for($i = 0; $i< count($yeniIban); $i++){
+    echo $yeniIban[$i]." ";
 }
 
 
